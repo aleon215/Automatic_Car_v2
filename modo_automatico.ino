@@ -4,7 +4,7 @@ void modo_automatico() {
   int dist_delantero_izq = medir_distancia(1);
   delay(5);
   int dist_delantero_der = medir_distancia(2);
-  // delay(20);
+  delay(5);
   // int dist_trasero_izq = medir_distancia(3);
   // int dist_trasero_der = medir_distancia(4);
   

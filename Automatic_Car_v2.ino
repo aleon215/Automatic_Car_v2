@@ -37,7 +37,7 @@ unsigned long timer_old;
 int tiempo_maximo = 10;
 
 // Tiempo en milisegundos de giro
-int delay_giro = 300;
+int delay_giro = 250;
 
 //Aquí conectamos los pins RXD,TDX del módulo Bluetooth.
 // NOTA: El chip HC-06 funciona perfectamente conectandolo al pin de alimentacion de 3.3v, sin necesidad de convertir la tension
