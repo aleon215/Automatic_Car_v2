@@ -1,7 +1,7 @@
 void giro_izquierda() {
 
-  Serial.println("Giro izquierda ---------------------   IIIIIIIIIIII");
-  BT.println("Giro Izquierda ---------------------   IIIIIIIIIIII");
+  Serial.println("--------- Giro IZQUIERDA");
+  BT.println("--------- Giro IZQUIERDA");
   
   uint8_t i;
       

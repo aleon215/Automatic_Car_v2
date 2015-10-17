@@ -3,8 +3,11 @@ void setup() {
   // Laser
   // pinMode(LASER, OUTPUT);
   Serial.begin(9600);
-  
   BT.begin(9600); //Velocidad del puerto del módulo Bluetooth
+  
+  // Sensores de distancia
+  pinMode(11, OUTPUT);
+  pinMode(A1, OUTPUT);
 
   AFMS.begin();  // create with the default frequency 1.6KHz
   //AFMS.begin(1000);  // OR with a different frequency, say 1KHz
@@ -21,15 +24,15 @@ void setup() {
   // turn on motor
   myMotorRight->run(RELEASE);
   
-  // Sensores de distancia
+
   
   // Sensor delantero derecho, mirado el coche de frente
-  pinMode(13, OUTPUT); // Activación del pin 9 como salida: para el pulso ultrasónico
-  pinMode(12, INPUT); // Activación del pin 8 como entrada: tiempo del rebote del ultrasonido
+  // pinMode(7, OUTPUT); // Trig
+  // pinMode(6, INPUT); // Echo
   
   // Sensor delantero izquierdo, mirado el coche de frente
-  pinMode(11, OUTPUT); // Activación del pin 7 como salida: para el pulso ultrasónico
-  pinMode(10, INPUT); // Activación del pin 6 como entrada: tiempo del rebote del ultrasonido
+  // pinMode(11, OUTPUT); // Trig
+  // pinMode(10, INPUT); // Echo
   
   // Sensor trasero derecho, mirado el coche de frente
   // pinMode(1, OUTPUT); // Activación del pin 5 como salida: para el pulso ultrasónico

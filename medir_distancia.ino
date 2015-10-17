@@ -7,35 +7,25 @@ long medir_distancia (int sensor) {
   
   if (sensor == 1) {
     
-    // Getting distance sensor 1 (delantero izquierdo, mirado el coche de frente)
-    
-    digitalWrite(11, LOW); /* envío del pulso ultrasónico*/
-    delayMicroseconds(2);
-    digitalWrite(11, HIGH); /* Por cuestión de estabilización del sensor*/
+    // Sensor derecho
+    digitalWrite(11, HIGH); /* envío del pulso ultrasónico*/
     delayMicroseconds(10);
-    tiempo = pulseIn(10, HIGH);
+    digitalWrite(11, LOW); /* Por cuestión de estabilización del sensor*/
+    tiempo = pulseIn(10, HIGH, 15000);
+    if (tiempo==0) tiempo=15000;
     distancia = tiempo / 58; /*fórmula para calcular la distancia obteniendo un valor entero*/
-    Serial.print("Delantero izquierdo: ");
-    Serial.println(distancia);
-    BT.print("Delantero izquierdo: ");
-    BT.println(distancia);
     return distancia;
   }
   
   if (sensor == 2) {
     
-    // Getting distance sensor 2 (delantero derecho, mirado el coche de frente)
-    
-    digitalWrite(13, LOW); /* envío del pulso ultrasónico*/
-    delayMicroseconds(2);
-    digitalWrite(13, HIGH); /* Por cuestión de estabilización del sensor*/
+    // Sensor izquierdo
+    digitalWrite(A1, HIGH); 
     delayMicroseconds(10);
-    tiempo = pulseIn(12, HIGH);
+    digitalWrite(A1, LOW);
+    tiempo = pulseIn(A0, HIGH, 15000);
+    if (tiempo==0) tiempo=15000;
     distancia = tiempo / 58; /*fórmula para calcular la distancia obteniendo un valor entero*/
-    Serial.print("Delantero derecho: ");
-    Serial.println(distancia);
-    BT.print("Delantero derecho: ");
-    BT.println(distancia);
     return distancia;
   }
 }

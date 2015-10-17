@@ -13,5 +13,5 @@ void adelantar() {
   myMotorLeft->setSpeed(i);  
   myMotorRight->setSpeed(i);
   
-  delay(5);
+  // delay(5);
 }

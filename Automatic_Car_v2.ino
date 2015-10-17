@@ -2,7 +2,7 @@
 #include <Wire.h>
 #include <Adafruit_MotorShield.h>
 #include "utility/Adafruit_PWMServoDriver.h"
-#include <IRremote.h>
+// #include <IRremote.h>
 
 //int accelX;
 //int accelY;
@@ -37,10 +37,11 @@ unsigned long timer_old;
 int tiempo_maximo = 10;
 
 // Tiempo en milisegundos de giro
-int delay_giro = 250;
+int delay_giro = 200;
 
 //Aquí conectamos los pins RXD,TDX del módulo Bluetooth.
 // NOTA: El chip HC-06 funciona perfectamente conectandolo al pin de alimentacion de 3.3v, sin necesidad de convertir la tension
 SoftwareSerial BT(8,9); //8 RX, 9 TX.
+
 
 
