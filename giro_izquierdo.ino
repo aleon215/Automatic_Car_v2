@@ -1,7 +1,12 @@
-void giro_izquierda() {
+void giro_izquierda(int delay_giro_in) {
 
-  Serial.println("--------- Giro IZQUIERDA");
-  BT.println("--------- Giro IZQUIERDA");
+  Serial.print(F("---- Giro IZQUIERDA: "));
+  Serial.print(delay_giro_in);
+  Serial.println(F(" ms"));
+  
+  BT.print(F("---- Giro IZQUIERDA: "));
+  BT.print(delay_giro_in);
+  BT.println(F(" ms"));
   
   uint8_t i;
       
@@ -14,5 +19,5 @@ void giro_izquierda() {
   i = 150;
   myMotorRight->setSpeed(i);
     
-  delay(delay_giro);
+  delay(delay_giro_in);
 }

@@ -7,7 +7,11 @@ void setup() {
   
   // Sensores de distancia
   pinMode(11, OUTPUT);
-  pinMode(A1, OUTPUT);
+  pinMode(13, OUTPUT);
+  
+  // Laser
+  pinMode (5, OUTPUT);
+  digitalWrite (5, LOW);  // Por defecto quiero el laser apagado
 
   AFMS.begin();  // create with the default frequency 1.6KHz
   //AFMS.begin(1000);  // OR with a different frequency, say 1KHz

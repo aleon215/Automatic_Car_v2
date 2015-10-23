@@ -23,11 +23,11 @@ Adafruit_MotorShield AFMS = Adafruit_MotorShield();
 // Instanciar los motores
 // Adafruit_DCMotor *myMotorLeft = AFMS.getMotor(1);
 // Adafruit_DCMotor *myMotorLeft = AFMS.getMotor(2);
-Adafruit_DCMotor *myMotorRight = AFMS.getMotor(1);
-Adafruit_DCMotor *myMotorLeft = AFMS.getMotor(2);
+Adafruit_DCMotor *myMotorRight = AFMS.getMotor(3);
+Adafruit_DCMotor *myMotorLeft = AFMS.getMotor(4);
 
 // Distancia minima detectada por los sensores de distancia para girar, medida en centimetros
-int distancia_minima = 15;
+int distancia_minima = 16;
 
 // Temporizador
 unsigned long timer_new;
@@ -36,8 +36,8 @@ unsigned long timer_old;
 // Tiempo maximo en segundos para forzar giro si no ha girado solo
 int tiempo_maximo = 10;
 
-// Tiempo en milisegundos de giro
-int delay_giro = 200;
+// Tiempo por defecto en milisegundos de giro
+int delay_giro_default = 350;
 
 //Aquí conectamos los pins RXD,TDX del módulo Bluetooth.
 // NOTA: El chip HC-06 funciona perfectamente conectandolo al pin de alimentacion de 3.3v, sin necesidad de convertir la tension

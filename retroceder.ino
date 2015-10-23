@@ -1,16 +1,16 @@
 void retroceder() {
     
-    Serial.println("Retrocediendo");
-    BT.println("Retrocediendo");
+    Serial.println(F("Retrocediendo"));
+    BT.println(F("Retrocediendo"));
     uint8_t i;
     
     myMotorLeft->run(BACKWARD);
     myMotorRight->run(BACKWARD);
     
-    i = 80;
+    i = 150;
     
     myMotorLeft->setSpeed(i);  
     myMotorRight->setSpeed(i); 
     
-    delay(400); 
+    delay(500); 
 }

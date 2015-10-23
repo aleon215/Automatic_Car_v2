@@ -1,14 +1,14 @@
 void adelantar() {
   
-  Serial.println("Adelantando");
-  BT.println("Adelantando");
+  Serial.println(F("Adelantando"));
+  BT.println(F("Adelantando"));
   
   uint8_t i;
   
   myMotorLeft->run(FORWARD);
   myMotorRight->run(FORWARD);
 
-  i = 150;
+  i = 130;
   
   myMotorLeft->setSpeed(i);  
   myMotorRight->setSpeed(i);

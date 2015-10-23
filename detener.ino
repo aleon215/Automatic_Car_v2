@@ -1,17 +1,16 @@
 void detener() {
   
-  Serial.println("Deteniendo");
-  BT.println("Deteniendo");
-  
-  uint8_t i;
+  Serial.println(F("Deteniendo"));
+  BT.println(F("Deteniendo"));
   
   myMotorLeft->run(FORWARD);
   myMotorRight->run(FORWARD);
 
-  i = 0;
+  for(int i=100; i >= 0 ; i--) {  
+    myMotorLeft->setSpeed(i);  
+    myMotorRight->setSpeed(i);
+    delay(5);
+  }
   
-  myMotorLeft->setSpeed(i);  
-  myMotorRight->setSpeed(i);
-  
-  delay(5);
+  // delay(5);
 }
